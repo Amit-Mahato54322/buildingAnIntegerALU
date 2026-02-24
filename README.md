@@ -1,40 +1,4 @@
-# buildingAnIntegerALU
-<!-- README.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Computer Architecture – Verilog Circuit Design Project</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height: 1.5;
-      margin: 24px;
-      max-width: 920px;
-    }
-    code, pre {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-    }
-    pre {
-      padding: 12px;
-      border-radius: 8px;
-      overflow-x: auto;
-      border: 1px solid rgba(127,127,127,0.35);
-    }
-    h1, h2, h3 { line-height: 1.2; }
-    .muted { opacity: 0.8; }
-    ul { margin-top: 6px; }
-    .card {
-      padding: 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(127,127,127,0.35);
-      margin: 14px 0;
-    }
-  </style>
-</head>
-<body>
+
 
   <h1>Computer Architecture – Verilog Circuit Design Project</h1>
   <p class="muted">
