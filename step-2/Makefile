@@ -9,9 +9,35 @@ WAVES_DIR = waves
 
 all: test_gates test_arithmetic test_shifter
 
-test_gates: $(WAVES_DIR)
-	$(IVERILOG) -g2012 -o $(WAVES_DIR)/gates.out $(SRC_GATES) tests/tb_gates_step2.v
-	$(VVP) $(WAVES_DIR)/gates.out
+test_gates: test_and4 test_nand4 test_or4 test_nor4 test_xor4 test_xnor4 test_not4
+
+test_and4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/and4.out $(SRC_GATES) tests/tb_and4.v
+	$(VVP) $(WAVES_DIR)/and4.out
+
+test_nand4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/nand4.out $(SRC_GATES) tests/tb_nand4.v
+	$(VVP) $(WAVES_DIR)/nand4.out
+
+test_or4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/or4.out $(SRC_GATES) tests/tb_or4.v
+	$(VVP) $(WAVES_DIR)/or4.out
+
+test_nor4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/nor4.out $(SRC_GATES) tests/tb_nor4.v
+	$(VVP) $(WAVES_DIR)/nor4.out
+
+test_xor4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/xor4.out $(SRC_GATES) tests/tb_xor4.v
+	$(VVP) $(WAVES_DIR)/xor4.out
+
+test_xnor4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/xnor4.out $(SRC_GATES) tests/tb_xnor4.v
+	$(VVP) $(WAVES_DIR)/xnor4.out
+
+test_not4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/not4.out $(SRC_GATES) tests/tb_not4.v
+	$(VVP) $(WAVES_DIR)/not4.out
 
 test_arithmetic: $(WAVES_DIR)
 	$(IVERILOG) -g2012 -o $(WAVES_DIR)/arithmetic.out $(SRC_ARITH) tests/tb_arithmetic_step2.v
@@ -28,7 +54,7 @@ clean:
 	rm -f $(WAVES_DIR)/*.out $(WAVES_DIR)/*.vcd
 
 wave_gates:
-	gtkwave $(WAVES_DIR)/gates_step2.vcd
+	gtkwave $(WAVES_DIR)/and4.vcd $(WAVES_DIR)/nand4.vcd $(WAVES_DIR)/or4.vcd $(WAVES_DIR)/nor4.vcd $(WAVES_DIR)/xor4.vcd $(WAVES_DIR)/xnor4.vcd $(WAVES_DIR)/not4.vcd
 
 wave_arithmetic:
 	gtkwave $(WAVES_DIR)/arithmetic_step2.vcd

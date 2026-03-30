@@ -8,48 +8,48 @@
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2009.vpi";
-S_0x10108ee30 .scope package, "$unit" "$unit" 2 1;
+S_0x104f66e40 .scope package, "$unit" "$unit" 2 1;
  .timescale 0 0;
-S_0x10108cbe0 .scope module, "tb_ashifter_step2" "tb_ashifter_step2" 3 3;
+S_0x104f64c00 .scope module, "tb_ashifter_step2" "tb_ashifter_step2" 3 3;
  .timescale -9 -12;
-v0x1010966d0_0 .var "a", 3 0;
-v0x101096770_0 .var/i "errors", 31 0;
-v0x101096810_0 .var "s", 1 0;
-v0x1010968b0_0 .net "y", 3 0, L_0x8ccc4c070;  1 drivers
-S_0x10108cd60 .scope task, "check4" "check4" 3 13, 3 13 0, S_0x10108cbe0;
+v0x104f6f020_0 .var "a", 3 0;
+v0x104f6f0c0_0 .var/i "errors", 31 0;
+v0x104f6f160_0 .var "s", 1 0;
+v0x104f701b0_0 .net "y", 3 0, L_0x9cac44070;  1 drivers
+S_0x104f64d80 .scope task, "check4" "check4" 3 13, 3 13 0, S_0x104f64c00;
  .timescale -9 -12;
-v0x10108efb0_0 .var "exp", 3 0;
-v0x10108f050_0 .var "got", 3 0;
-v0x101097020_0 .var "label", 255 0;
+v0x104f66fc0_0 .var "exp", 3 0;
+v0x104f67060_0 .var "got", 3 0;
+v0x104f6f9d0_0 .var "label", 255 0;
 TD_tb_ashifter_step2.check4 ;
-    %load/vec4 v0x10108f050_0;
-    %load/vec4 v0x10108efb0_0;
+    %load/vec4 v0x104f67060_0;
+    %load/vec4 v0x104f66fc0_0;
     %cmp/ne;
     %jmp/0xz  T_0.0, 6;
-    %vpi_call/w 3 19 "$display", "FAIL: %s | got=%b exp=%b", v0x101097020_0, v0x10108f050_0, v0x10108efb0_0 {0 0 0};
-    %load/vec4 v0x101096770_0;
+    %vpi_call/w 3 19 "$display", "FAIL: %s | got=%b exp=%b", v0x104f6f9d0_0, v0x104f67060_0, v0x104f66fc0_0 {0 0 0};
+    %load/vec4 v0x104f6f0c0_0;
     %addi 1, 0, 32;
-    %store/vec4 v0x101096770_0, 0, 32;
+    %store/vec4 v0x104f6f0c0_0, 0, 32;
     %jmp T_0.1;
 T_0.0 ;
-    %vpi_call/w 3 22 "$display", "PASS: %s", v0x101097020_0 {0 0 0};
+    %vpi_call/w 3 22 "$display", "PASS: %s", v0x104f6f9d0_0 {0 0 0};
 T_0.1 ;
     %end;
-S_0x1010970c0 .scope module, "dut" "ashifter4" 3 11, 4 9 0, S_0x10108cbe0;
+S_0x104f6fa70 .scope module, "dut" "ashifter4" 3 11, 4 9 0, S_0x104f64c00;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 2 "s";
     .port_info 2 /OUTPUT 4 "y";
-L_0x8ccc4c070 .functor BUFZ 4, v0x101096630_0, C4<0000>, C4<0000>, C4<0000>;
-v0x101097290_0 .net "a", 3 0, v0x1010966d0_0;  1 drivers
-v0x101097330_0 .net "s", 1 0, v0x101096810_0;  1 drivers
-v0x101096590_0 .net "y", 3 0, L_0x8ccc4c070;  alias, 1 drivers
-v0x101096630_0 .var "y_reg", 3 0;
-E_0x8ccc403c0 .event anyedge, v0x101097330_0, v0x101097290_0;
-    .scope S_0x1010970c0;
+L_0x9cac44070 .functor BUFZ 4, v0x104f6ef80_0, C4<0000>, C4<0000>, C4<0000>;
+v0x104f6eda0_0 .net "a", 3 0, v0x104f6f020_0;  1 drivers
+v0x104f6ee40_0 .net "s", 1 0, v0x104f6f160_0;  1 drivers
+v0x104f6eee0_0 .net "y", 3 0, L_0x9cac44070;  alias, 1 drivers
+v0x104f6ef80_0 .var "y_reg", 3 0;
+E_0x9ca8000c0 .event anyedge, v0x104f6ee40_0, v0x104f6eda0_0;
+    .scope S_0x104f6fa70;
 T_1 ;
-    %wait E_0x8ccc403c0;
-    %load/vec4 v0x101097330_0;
+    %wait E_0x9ca8000c0;
+    %load/vec4 v0x104f6ee40_0;
     %dup/vec4;
     %pushi/vec4 0, 0, 2;
     %cmp/u;
@@ -67,48 +67,48 @@ T_1 ;
     %cmp/u;
     %jmp/1 T_1.3, 6;
     %pushi/vec4 15, 15, 4;
-    %store/vec4 v0x101096630_0, 0, 4;
+    %store/vec4 v0x104f6ef80_0, 0, 4;
     %jmp T_1.5;
 T_1.0 ;
-    %load/vec4 v0x101097290_0;
-    %store/vec4 v0x101096630_0, 0, 4;
+    %load/vec4 v0x104f6eda0_0;
+    %store/vec4 v0x104f6ef80_0, 0, 4;
     %jmp T_1.5;
 T_1.1 ;
-    %load/vec4 v0x101097290_0;
+    %load/vec4 v0x104f6eda0_0;
     %ix/load 4, 1, 0;
     %flag_set/imm 4, 0;
     %shiftl 4;
-    %store/vec4 v0x101096630_0, 0, 4;
+    %store/vec4 v0x104f6ef80_0, 0, 4;
     %jmp T_1.5;
 T_1.2 ;
-    %load/vec4 v0x101097290_0;
+    %load/vec4 v0x104f6eda0_0;
     %ix/load 4, 1, 0;
     %flag_set/imm 4, 0;
     %shiftr 4;
-    %store/vec4 v0x101096630_0, 0, 4;
+    %store/vec4 v0x104f6ef80_0, 0, 4;
     %jmp T_1.5;
 T_1.3 ;
-    %load/vec4 v0x101097290_0;
+    %load/vec4 v0x104f6eda0_0;
     %parti/s 1, 3, 3;
-    %load/vec4 v0x101097290_0;
+    %load/vec4 v0x104f6eda0_0;
     %parti/s 3, 1, 2;
     %concat/vec4; draw_concat_vec4
-    %store/vec4 v0x101096630_0, 0, 4;
+    %store/vec4 v0x104f6ef80_0, 0, 4;
     %jmp T_1.5;
 T_1.5 ;
     %pop/vec4 1;
     %jmp T_1;
     .thread T_1, $push;
-    .scope S_0x10108cbe0;
+    .scope S_0x104f64c00;
 T_2 ;
     %pushi/vec4 0, 0, 32;
-    %store/vec4 v0x101096770_0, 0, 32;
+    %store/vec4 v0x104f6f0c0_0, 0, 32;
     %vpi_call/w 3 29 "$dumpfile", "waves/ashifter_step2.vcd" {0 0 0};
-    %vpi_call/w 3 30 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x10108cbe0 {0 0 0};
+    %vpi_call/w 3 30 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x104f64c00 {0 0 0};
     %pushi/vec4 11, 0, 4;
-    %store/vec4 v0x1010966d0_0, 0, 4;
+    %store/vec4 v0x104f6f020_0, 0, 4;
     %pushi/vec4 0, 0, 2;
-    %store/vec4 v0x101096810_0, 0, 2;
+    %store/vec4 v0x104f6f160_0, 0, 2;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -125,15 +125,15 @@ T_2 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 542003024, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x101097020_0, 0, 256;
-    %load/vec4 v0x1010968b0_0;
-    %store/vec4 v0x10108f050_0, 0, 4;
+    %store/vec4 v0x104f6f9d0_0, 0, 256;
+    %load/vec4 v0x104f701b0_0;
+    %store/vec4 v0x104f67060_0, 0, 4;
     %pushi/vec4 11, 0, 4;
-    %store/vec4 v0x10108efb0_0, 0, 4;
-    %fork TD_tb_ashifter_step2.check4, S_0x10108cd60;
+    %store/vec4 v0x104f66fc0_0, 0, 4;
+    %fork TD_tb_ashifter_step2.check4, S_0x104f64d80;
     %join;
     %pushi/vec4 1, 0, 2;
-    %store/vec4 v0x101096810_0, 0, 2;
+    %store/vec4 v0x104f6f160_0, 0, 2;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -150,15 +150,15 @@ T_2 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 541872972, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x101097020_0, 0, 256;
-    %load/vec4 v0x1010968b0_0;
-    %store/vec4 v0x10108f050_0, 0, 4;
+    %store/vec4 v0x104f6f9d0_0, 0, 256;
+    %load/vec4 v0x104f701b0_0;
+    %store/vec4 v0x104f67060_0, 0, 4;
     %pushi/vec4 6, 0, 4;
-    %store/vec4 v0x10108efb0_0, 0, 4;
-    %fork TD_tb_ashifter_step2.check4, S_0x10108cd60;
+    %store/vec4 v0x104f66fc0_0, 0, 4;
+    %fork TD_tb_ashifter_step2.check4, S_0x104f64d80;
     %join;
     %pushi/vec4 2, 0, 2;
-    %store/vec4 v0x101096810_0, 0, 2;
+    %store/vec4 v0x104f6f160_0, 0, 2;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -175,15 +175,15 @@ T_2 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 541872978, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x101097020_0, 0, 256;
-    %load/vec4 v0x1010968b0_0;
-    %store/vec4 v0x10108f050_0, 0, 4;
+    %store/vec4 v0x104f6f9d0_0, 0, 256;
+    %load/vec4 v0x104f701b0_0;
+    %store/vec4 v0x104f67060_0, 0, 4;
     %pushi/vec4 5, 0, 4;
-    %store/vec4 v0x10108efb0_0, 0, 4;
-    %fork TD_tb_ashifter_step2.check4, S_0x10108cd60;
+    %store/vec4 v0x104f66fc0_0, 0, 4;
+    %fork TD_tb_ashifter_step2.check4, S_0x104f64d80;
     %join;
     %pushi/vec4 3, 0, 2;
-    %store/vec4 v0x101096810_0, 0, 2;
+    %store/vec4 v0x104f6f160_0, 0, 2;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -200,20 +200,20 @@ T_2 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 541152082, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x101097020_0, 0, 256;
-    %load/vec4 v0x1010968b0_0;
-    %store/vec4 v0x10108f050_0, 0, 4;
+    %store/vec4 v0x104f6f9d0_0, 0, 256;
+    %load/vec4 v0x104f701b0_0;
+    %store/vec4 v0x104f67060_0, 0, 4;
     %pushi/vec4 13, 0, 4;
-    %store/vec4 v0x10108efb0_0, 0, 4;
-    %fork TD_tb_ashifter_step2.check4, S_0x10108cd60;
+    %store/vec4 v0x104f66fc0_0, 0, 4;
+    %fork TD_tb_ashifter_step2.check4, S_0x104f64d80;
     %join;
-    %load/vec4 v0x101096770_0;
+    %load/vec4 v0x104f6f0c0_0;
     %cmpi/e 0, 0, 32;
     %jmp/0xz  T_2.0, 4;
     %vpi_call/w 3 39 "$display", "ASHIFTER_STEP2: ALL TESTS PASSED \342\234\205" {0 0 0};
     %jmp T_2.1;
 T_2.0 ;
-    %vpi_call/w 3 40 "$display", "ASHIFTER_STEP2: FAILED \342\235\214 errors=%0d", v0x101096770_0 {0 0 0};
+    %vpi_call/w 3 40 "$display", "ASHIFTER_STEP2: FAILED \342\235\214 errors=%0d", v0x104f6f0c0_0 {0 0 0};
 T_2.1 ;
     %delay 5000, 0;
     %vpi_call/w 3 42 "$finish" {0 0 0};

@@ -1,0 +1,67 @@
+$date
+	Mon Mar 30 11:50:16 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_not4 $end
+$var wire 4 ! y [3:0] $end
+$var reg 4 " a [3:0] $end
+$var integer 32 # errors [31:0] $end
+$scope module dut $end
+$var wire 4 $ a [3:0] $end
+$var wire 4 % y [3:0] $end
+$upscope $end
+$scope task check4 $end
+$var reg 4 & exp [3:0] $end
+$var reg 4 ' got [3:0] $end
+$var reg 256 ( label [255:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx (
+bx '
+bx &
+b1010 %
+b101 $
+b0 #
+b101 "
+b1010 !
+$end
+#5000
+b11 !
+b11 %
+b1100 "
+b1100 $
+b1010 &
+b1010 '
+b111111000110000001100010011000000110001 (
+#10000
+b0 !
+b0 %
+b1111 "
+b1111 $
+b11 &
+b11 '
+b111111000110001001100010011000000110000 (
+#15000
+b1111 !
+b1111 %
+b0 "
+b0 $
+b0 &
+b0 '
+b111111000110001001100010011000100110001 (
+#20000
+b1111 &
+b1111 '
+b111111000110000001100000011000000110000 (
+#25000
