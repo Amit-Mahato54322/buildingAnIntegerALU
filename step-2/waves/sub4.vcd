@@ -1,0 +1,60 @@
+$date
+	Mon Mar 30 15:39:59 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_sub4 $end
+$var wire 4 ! y_sub [3:0] $end
+$var wire 1 " bout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$var integer 32 % errors [31:0] $end
+$scope module sub4_dut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 4 ( y [3:0] $end
+$var wire 1 " bout $end
+$upscope $end
+$scope task check $end
+$var reg 32 ) exp [31:0] $end
+$var reg 32 * got [31:0] $end
+$var reg 256 + label [255:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx +
+bx *
+bx )
+b10 (
+b11 '
+b101 &
+b0 %
+b11 $
+b101 #
+0"
+b10 !
+$end
+#5000
+1"
+b1110 !
+b1110 (
+b101 $
+b101 '
+b11 #
+b11 &
+b10 )
+b10 *
+b10100110101010101000010 +
+#10000
+b11111111111111111111111111111110 )
+b11111111111111111111111111111110 *
+#15000

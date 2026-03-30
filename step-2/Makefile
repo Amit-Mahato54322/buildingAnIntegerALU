@@ -2,7 +2,7 @@ IVERILOG = iverilog
 VVP      = vvp
 
 SRC_GATES = verilog/gates_step2.v
-SRC_ARITH = verilog/arithmetic_step2.v
+SRC_ARITH = verilog/arithmetic/add4.v verilog/arithmetic/sub4.v verilog/arithmetic/mul4.v verilog/arithmetic/div4.v
 SRC_SHIFT = verilog/ashifter_step2.v
 
 WAVES_DIR = waves
@@ -39,9 +39,23 @@ test_not4: $(WAVES_DIR)
 	$(IVERILOG) -g2012 -o $(WAVES_DIR)/not4.out $(SRC_GATES) tests/tb_not4.v
 	$(VVP) $(WAVES_DIR)/not4.out
 
-test_arithmetic: $(WAVES_DIR)
-	$(IVERILOG) -g2012 -o $(WAVES_DIR)/arithmetic.out $(SRC_ARITH) tests/tb_arithmetic_step2.v
-	$(VVP) $(WAVES_DIR)/arithmetic.out
+test_arithmetic: test_add4 test_sub4 test_mul4 test_div4
+
+test_add4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/add4.out verilog/arithmetic/add4.v tests/arithmetic/tb_add4.v
+	$(VVP) $(WAVES_DIR)/add4.out
+
+test_sub4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/sub4.out verilog/arithmetic/sub4.v tests/arithmetic/tb_sub4.v
+	$(VVP) $(WAVES_DIR)/sub4.out
+
+test_mul4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/mul4.out verilog/arithmetic/mul4.v tests/arithmetic/tb_mul4.v
+	$(VVP) $(WAVES_DIR)/mul4.out
+
+test_div4: $(WAVES_DIR)
+	$(IVERILOG) -g2012 -o $(WAVES_DIR)/div4.out verilog/arithmetic/div4.v tests/arithmetic/tb_div4.v
+	$(VVP) $(WAVES_DIR)/div4.out
 
 test_shifter: $(WAVES_DIR)
 	$(IVERILOG) -g2012 -o $(WAVES_DIR)/ashifter.out $(SRC_SHIFT) tests/tb_ashifter_step2.v

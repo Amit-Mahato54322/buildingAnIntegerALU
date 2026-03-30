@@ -8,121 +8,121 @@
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
 :vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2009.vpi";
-S_0x1056e43c0 .scope package, "$unit" "$unit" 2 1;
+S_0x100c8c530 .scope package, "$unit" "$unit" 2 1;
  .timescale 0 0;
-S_0x1056e4540 .scope module, "and4" "and4" 3 4;
+S_0x100c8c6b0 .scope module, "and4" "and4" 3 4;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /OUTPUT 4 "y";
-o0x853420010 .functor BUFZ 4, C4<zzzz>; HiZ drive
-o0x853420040 .functor BUFZ 4, C4<zzzz>; HiZ drive
-L_0x1056eb1c0 .functor AND 4, o0x853420010, o0x853420040, C4<1111>, C4<1111>;
-v0x1056ebc80_0 .net "a", 3 0, o0x853420010;  0 drivers
-v0x1056eb960_0 .net "b", 3 0, o0x853420040;  0 drivers
-v0x1056eb6c0_0 .net "y", 3 0, L_0x1056eb1c0;  1 drivers
-S_0x852c34000 .scope module, "nand4" "nand4" 3 13;
+o0xc1b420010 .functor BUFZ 4, C4<zzzz>; HiZ drive
+o0xc1b420040 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x100c93e00 .functor AND 4, o0xc1b420010, o0xc1b420040, C4<1111>, C4<1111>;
+v0x100c94320_0 .net "a", 3 0, o0xc1b420010;  0 drivers
+v0x100c94000_0 .net "b", 3 0, o0xc1b420040;  0 drivers
+v0x100c93d60_0 .net "y", 3 0, L_0x100c93e00;  1 drivers
+S_0xc1ac58000 .scope module, "nand4" "nand4" 3 13;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /OUTPUT 4 "y";
-o0x853420160 .functor BUFZ 4, C4<zzzz>; HiZ drive
-o0x853420190 .functor BUFZ 4, C4<zzzz>; HiZ drive
-L_0x1056eb760 .functor AND 4, o0x853420160, o0x853420190, C4<1111>, C4<1111>;
-L_0x1056eba00 .functor NOT 4, L_0x1056eb760, C4<0000>, C4<0000>, C4<0000>;
-v0x1056eb120_0 .net *"_ivl_0", 3 0, L_0x1056eb760;  1 drivers
-v0x1056eab60_0 .net "a", 3 0, o0x853420160;  0 drivers
-v0x852c4c000_0 .net "b", 3 0, o0x853420190;  0 drivers
-v0x852c4c0a0_0 .net "y", 3 0, L_0x1056eba00;  1 drivers
-S_0x852c34180 .scope module, "nor4" "nor4" 3 31;
+o0xc1b420160 .functor BUFZ 4, C4<zzzz>; HiZ drive
+o0xc1b420190 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x100c940a0 .functor AND 4, o0xc1b420160, o0xc1b420190, C4<1111>, C4<1111>;
+L_0x100c943c0 .functor NOT 4, L_0x100c940a0, C4<0000>, C4<0000>, C4<0000>;
+v0x100c937c0_0 .net *"_ivl_0", 3 0, L_0x100c940a0;  1 drivers
+v0x100c93200_0 .net "a", 3 0, o0xc1b420160;  0 drivers
+v0xc1ac5c000_0 .net "b", 3 0, o0xc1b420190;  0 drivers
+v0xc1ac5c0a0_0 .net "y", 3 0, L_0x100c943c0;  1 drivers
+S_0xc1ac58180 .scope module, "nor4" "nor4" 3 31;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /OUTPUT 4 "y";
-o0x8534202b0 .functor BUFZ 4, C4<zzzz>; HiZ drive
-o0x8534202e0 .functor BUFZ 4, C4<zzzz>; HiZ drive
-L_0x1056ebd20 .functor OR 4, o0x8534202b0, o0x8534202e0, C4<0000>, C4<0000>;
-L_0x1056e46c0 .functor NOT 4, L_0x1056ebd20, C4<0000>, C4<0000>, C4<0000>;
-v0x852c4c140_0 .net *"_ivl_0", 3 0, L_0x1056ebd20;  1 drivers
-v0x852c4c1e0_0 .net "a", 3 0, o0x8534202b0;  0 drivers
-v0x852c4c280_0 .net "b", 3 0, o0x8534202e0;  0 drivers
-v0x852c4c320_0 .net "y", 3 0, L_0x1056e46c0;  1 drivers
-S_0x852c34300 .scope module, "not4" "not4" 3 58;
+o0xc1b4202b0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+o0xc1b4202e0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x100c8c830 .functor OR 4, o0xc1b4202b0, o0xc1b4202e0, C4<0000>, C4<0000>;
+L_0x100c96ab0 .functor NOT 4, L_0x100c8c830, C4<0000>, C4<0000>, C4<0000>;
+v0xc1ac5c140_0 .net *"_ivl_0", 3 0, L_0x100c8c830;  1 drivers
+v0xc1ac5c1e0_0 .net "a", 3 0, o0xc1b4202b0;  0 drivers
+v0xc1ac5c280_0 .net "b", 3 0, o0xc1b4202e0;  0 drivers
+v0xc1ac5c320_0 .net "y", 3 0, L_0x100c96ab0;  1 drivers
+S_0xc1ac58300 .scope module, "not4" "not4" 3 58;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /OUTPUT 4 "y";
-o0x8534203d0 .functor BUFZ 4, C4<zzzz>; HiZ drive
-L_0x1056ee540 .functor NOT 4, o0x8534203d0, C4<0000>, C4<0000>, C4<0000>;
-v0x852c4c3c0_0 .net "a", 3 0, o0x8534203d0;  0 drivers
-v0x852c4c460_0 .net "y", 3 0, L_0x1056ee540;  1 drivers
-S_0x852c34480 .scope module, "or4" "or4" 3 22;
+o0xc1b4203d0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x100c96b20 .functor NOT 4, o0xc1b4203d0, C4<0000>, C4<0000>, C4<0000>;
+v0xc1ac5c3c0_0 .net "a", 3 0, o0xc1b4203d0;  0 drivers
+v0xc1ac5c460_0 .net "y", 3 0, L_0x100c96b20;  1 drivers
+S_0xc1ac58480 .scope module, "or4" "or4" 3 22;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /OUTPUT 4 "y";
-o0x853420490 .functor BUFZ 4, C4<zzzz>; HiZ drive
-o0x8534204c0 .functor BUFZ 4, C4<zzzz>; HiZ drive
-L_0x1056ee5b0 .functor OR 4, o0x853420490, o0x8534204c0, C4<0000>, C4<0000>;
-v0x852c4c500_0 .net "a", 3 0, o0x853420490;  0 drivers
-v0x852c4c5a0_0 .net "b", 3 0, o0x8534204c0;  0 drivers
-v0x852c4c640_0 .net "y", 3 0, L_0x1056ee5b0;  1 drivers
-S_0x852c34600 .scope module, "tb_xor4" "tb_xor4" 4 3;
+o0xc1b420490 .functor BUFZ 4, C4<zzzz>; HiZ drive
+o0xc1b4204c0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x100c8cff0 .functor OR 4, o0xc1b420490, o0xc1b4204c0, C4<0000>, C4<0000>;
+v0xc1ac5c500_0 .net "a", 3 0, o0xc1b420490;  0 drivers
+v0xc1ac5c5a0_0 .net "b", 3 0, o0xc1b4204c0;  0 drivers
+v0xc1ac5c640_0 .net "y", 3 0, L_0x100c8cff0;  1 drivers
+S_0xc1ac58600 .scope module, "tb_xor4" "tb_xor4" 4 3;
  .timescale -9 -12;
-v0x852c4caa0_0 .var "a", 3 0;
-v0x852c4cb40_0 .var "b", 3 0;
-v0x852c4cbe0_0 .var/i "errors", 31 0;
-v0x852c4cc80_0 .net "y", 3 0, L_0x1056e5c20;  1 drivers
-S_0x1056e4c90 .scope task, "check4" "check4" 4 12, 4 12 0, S_0x852c34600;
+v0xc1ac5caa0_0 .var "a", 3 0;
+v0xc1ac5cb40_0 .var "b", 3 0;
+v0xc1ac5cbe0_0 .var/i "errors", 31 0;
+v0xc1ac5cc80_0 .net "y", 3 0, L_0x100c8d060;  1 drivers
+S_0xc1ac58900 .scope task, "check4" "check4" 4 12, 4 12 0, S_0xc1ac58600;
  .timescale -9 -12;
-v0x852c4c6e0_0 .var "exp", 3 0;
-v0x852c4c780_0 .var "got", 3 0;
-v0x852c4c820_0 .var "label", 255 0;
+v0xc1ac5c6e0_0 .var "exp", 3 0;
+v0xc1ac5c780_0 .var "got", 3 0;
+v0xc1ac5c820_0 .var "label", 255 0;
 TD_tb_xor4.check4 ;
-    %load/vec4 v0x852c4c780_0;
-    %load/vec4 v0x852c4c6e0_0;
+    %load/vec4 v0xc1ac5c780_0;
+    %load/vec4 v0xc1ac5c6e0_0;
     %cmp/ne;
     %jmp/0xz  T_0.0, 6;
-    %vpi_call/w 4 18 "$display", "FAIL: %s | got=%b exp=%b", v0x852c4c820_0, v0x852c4c780_0, v0x852c4c6e0_0 {0 0 0};
-    %load/vec4 v0x852c4cbe0_0;
+    %vpi_call/w 4 18 "$display", "FAIL: %s | got=%b exp=%b", v0xc1ac5c820_0, v0xc1ac5c780_0, v0xc1ac5c6e0_0 {0 0 0};
+    %load/vec4 v0xc1ac5cbe0_0;
     %addi 1, 0, 32;
-    %store/vec4 v0x852c4cbe0_0, 0, 32;
+    %store/vec4 v0xc1ac5cbe0_0, 0, 32;
     %jmp T_0.1;
 T_0.0 ;
-    %vpi_call/w 4 21 "$display", "PASS: %s", v0x852c4c820_0 {0 0 0};
+    %vpi_call/w 4 21 "$display", "PASS: %s", v0xc1ac5c820_0 {0 0 0};
 T_0.1 ;
     %end;
-S_0x1056e4e10 .scope module, "dut" "xor4" 4 10, 3 40 0, S_0x852c34600;
+S_0xc1ac58a80 .scope module, "dut" "xor4" 4 10, 3 40 0, S_0xc1ac58600;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /OUTPUT 4 "y";
-L_0x1056e5c20 .functor XOR 4, v0x852c4caa0_0, v0x852c4cb40_0, C4<0000>, C4<0000>;
-v0x852c4c8c0_0 .net "a", 3 0, v0x852c4caa0_0;  1 drivers
-v0x852c4c960_0 .net "b", 3 0, v0x852c4cb40_0;  1 drivers
-v0x852c4ca00_0 .net "y", 3 0, L_0x1056e5c20;  alias, 1 drivers
-S_0x852c34780 .scope module, "xnor4" "xnor4" 3 49;
+L_0x100c8d060 .functor XOR 4, v0xc1ac5caa0_0, v0xc1ac5cb40_0, C4<0000>, C4<0000>;
+v0xc1ac5c8c0_0 .net "a", 3 0, v0xc1ac5caa0_0;  1 drivers
+v0xc1ac5c960_0 .net "b", 3 0, v0xc1ac5cb40_0;  1 drivers
+v0xc1ac5ca00_0 .net "y", 3 0, L_0x100c8d060;  alias, 1 drivers
+S_0xc1ac58780 .scope module, "xnor4" "xnor4" 3 49;
  .timescale -9 -12;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /OUTPUT 4 "y";
-o0x8534207c0 .functor BUFZ 4, C4<zzzz>; HiZ drive
-o0x8534207f0 .functor BUFZ 4, C4<zzzz>; HiZ drive
-L_0x1056e5c90 .functor XOR 4, o0x8534207c0, o0x8534207f0, C4<0000>, C4<0000>;
-L_0x1056e5d00 .functor NOT 4, L_0x1056e5c90, C4<0000>, C4<0000>, C4<0000>;
-v0x852c4cd20_0 .net *"_ivl_0", 3 0, L_0x1056e5c90;  1 drivers
-v0x852c4cdc0_0 .net "a", 3 0, o0x8534207c0;  0 drivers
-v0x852c4ce60_0 .net "b", 3 0, o0x8534207f0;  0 drivers
-v0x852c4cf00_0 .net "y", 3 0, L_0x1056e5d00;  1 drivers
-    .scope S_0x852c34600;
+o0xc1b4207c0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+o0xc1b4207f0 .functor BUFZ 4, C4<zzzz>; HiZ drive
+L_0x100c8d0d0 .functor XOR 4, o0xc1b4207c0, o0xc1b4207f0, C4<0000>, C4<0000>;
+L_0x100c8d140 .functor NOT 4, L_0x100c8d0d0, C4<0000>, C4<0000>, C4<0000>;
+v0xc1ac5cd20_0 .net *"_ivl_0", 3 0, L_0x100c8d0d0;  1 drivers
+v0xc1ac5cdc0_0 .net "a", 3 0, o0xc1b4207c0;  0 drivers
+v0xc1ac5ce60_0 .net "b", 3 0, o0xc1b4207f0;  0 drivers
+v0xc1ac5cf00_0 .net "y", 3 0, L_0x100c8d140;  1 drivers
+    .scope S_0xc1ac58600;
 T_1 ;
     %pushi/vec4 0, 0, 32;
-    %store/vec4 v0x852c4cbe0_0, 0, 32;
+    %store/vec4 v0xc1ac5cbe0_0, 0, 32;
     %vpi_call/w 4 28 "$dumpfile", "waves/xor4.vcd" {0 0 0};
-    %vpi_call/w 4 29 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x852c34600 {0 0 0};
+    %vpi_call/w 4 29 "$dumpvars", 32'sb00000000000000000000000000000000, S_0xc1ac58600 {0 0 0};
     %pushi/vec4 5, 0, 4;
-    %store/vec4 v0x852c4caa0_0, 0, 4;
+    %store/vec4 v0xc1ac5caa0_0, 0, 4;
     %pushi/vec4 10, 0, 4;
-    %store/vec4 v0x852c4cb40_0, 0, 4;
+    %store/vec4 v0xc1ac5cb40_0, 0, 4;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -139,17 +139,17 @@ T_1 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 825241904, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x852c4c820_0, 0, 256;
-    %load/vec4 v0x852c4cc80_0;
-    %store/vec4 v0x852c4c780_0, 0, 4;
+    %store/vec4 v0xc1ac5c820_0, 0, 256;
+    %load/vec4 v0xc1ac5cc80_0;
+    %store/vec4 v0xc1ac5c780_0, 0, 4;
     %pushi/vec4 15, 0, 4;
-    %store/vec4 v0x852c4c6e0_0, 0, 4;
-    %fork TD_tb_xor4.check4, S_0x1056e4c90;
+    %store/vec4 v0xc1ac5c6e0_0, 0, 4;
+    %fork TD_tb_xor4.check4, S_0xc1ac58900;
     %join;
     %pushi/vec4 12, 0, 4;
-    %store/vec4 v0x852c4caa0_0, 0, 4;
+    %store/vec4 v0xc1ac5caa0_0, 0, 4;
     %pushi/vec4 9, 0, 4;
-    %store/vec4 v0x852c4cb40_0, 0, 4;
+    %store/vec4 v0xc1ac5cb40_0, 0, 4;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -166,17 +166,17 @@ T_1 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 825241649, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x852c4c820_0, 0, 256;
-    %load/vec4 v0x852c4cc80_0;
-    %store/vec4 v0x852c4c780_0, 0, 4;
+    %store/vec4 v0xc1ac5c820_0, 0, 256;
+    %load/vec4 v0xc1ac5cc80_0;
+    %store/vec4 v0xc1ac5c780_0, 0, 4;
     %pushi/vec4 5, 0, 4;
-    %store/vec4 v0x852c4c6e0_0, 0, 4;
-    %fork TD_tb_xor4.check4, S_0x1056e4c90;
+    %store/vec4 v0xc1ac5c6e0_0, 0, 4;
+    %fork TD_tb_xor4.check4, S_0xc1ac58900;
     %join;
     %pushi/vec4 15, 0, 4;
-    %store/vec4 v0x852c4caa0_0, 0, 4;
+    %store/vec4 v0xc1ac5caa0_0, 0, 4;
     %pushi/vec4 15, 0, 4;
-    %store/vec4 v0x852c4cb40_0, 0, 4;
+    %store/vec4 v0xc1ac5cb40_0, 0, 4;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -193,17 +193,17 @@ T_1 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 825307441, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x852c4c820_0, 0, 256;
-    %load/vec4 v0x852c4cc80_0;
-    %store/vec4 v0x852c4c780_0, 0, 4;
+    %store/vec4 v0xc1ac5c820_0, 0, 256;
+    %load/vec4 v0xc1ac5cc80_0;
+    %store/vec4 v0xc1ac5c780_0, 0, 4;
     %pushi/vec4 0, 0, 4;
-    %store/vec4 v0x852c4c6e0_0, 0, 4;
-    %fork TD_tb_xor4.check4, S_0x1056e4c90;
+    %store/vec4 v0xc1ac5c6e0_0, 0, 4;
+    %fork TD_tb_xor4.check4, S_0xc1ac58900;
     %join;
     %pushi/vec4 0, 0, 4;
-    %store/vec4 v0x852c4caa0_0, 0, 4;
+    %store/vec4 v0xc1ac5caa0_0, 0, 4;
     %pushi/vec4 15, 0, 4;
-    %store/vec4 v0x852c4cb40_0, 0, 4;
+    %store/vec4 v0xc1ac5cb40_0, 0, 4;
     %delay 5000, 0;
     %pushi/vec4 0, 0, 32; draw_string_vec4
     %pushi/vec4 0, 0, 32; draw_string_vec4
@@ -220,20 +220,20 @@ T_1 ;
     %concat/vec4; draw_string_vec4
     %pushi/vec4 825307441, 0, 32; draw_string_vec4
     %concat/vec4; draw_string_vec4
-    %store/vec4 v0x852c4c820_0, 0, 256;
-    %load/vec4 v0x852c4cc80_0;
-    %store/vec4 v0x852c4c780_0, 0, 4;
+    %store/vec4 v0xc1ac5c820_0, 0, 256;
+    %load/vec4 v0xc1ac5cc80_0;
+    %store/vec4 v0xc1ac5c780_0, 0, 4;
     %pushi/vec4 15, 0, 4;
-    %store/vec4 v0x852c4c6e0_0, 0, 4;
-    %fork TD_tb_xor4.check4, S_0x1056e4c90;
+    %store/vec4 v0xc1ac5c6e0_0, 0, 4;
+    %fork TD_tb_xor4.check4, S_0xc1ac58900;
     %join;
-    %load/vec4 v0x852c4cbe0_0;
+    %load/vec4 v0xc1ac5cbe0_0;
     %cmpi/e 0, 0, 32;
     %jmp/0xz  T_1.0, 4;
     %vpi_call/w 4 36 "$display", "XOR4: ALL TESTS PASSED \342\234\205" {0 0 0};
     %jmp T_1.1;
 T_1.0 ;
-    %vpi_call/w 4 37 "$display", "XOR4: FAILED \342\235\214 errors=%0d", v0x852c4cbe0_0 {0 0 0};
+    %vpi_call/w 4 37 "$display", "XOR4: FAILED \342\235\214 errors=%0d", v0xc1ac5cbe0_0 {0 0 0};
 T_1.1 ;
     %delay 5000, 0;
     %vpi_call/w 4 39 "$finish" {0 0 0};

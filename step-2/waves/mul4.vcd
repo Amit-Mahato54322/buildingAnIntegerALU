@@ -1,0 +1,56 @@
+$date
+	Mon Mar 30 15:39:59 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_mul4 $end
+$var wire 8 ! y_mul [7:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$var integer 32 $ errors [31:0] $end
+$scope module mul4_dut $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 8 ' y [7:0] $end
+$upscope $end
+$scope task check $end
+$var reg 32 ( exp [31:0] $end
+$var reg 32 ) got [31:0] $end
+$var reg 256 * label [255:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx *
+bx )
+bx (
+b1111 '
+b11 &
+b101 %
+b0 $
+b11 #
+b101 "
+b1111 !
+$end
+#5000
+b1000 #
+b1000 &
+b1001000 !
+b1001000 '
+b1001 "
+b1001 %
+b1111 (
+b1111 )
+b10011010101010101001100 *
+#10000
+b1001000 (
+b1001000 )
+#15000
