@@ -82,17 +82,27 @@
 │   └── Makefile
 └── step-2/
     ├── verilog/
+    │   ├── arithmetic/
+    │   │   ├── add4.v
+    │   │   ├── sub4.v
+    │   │   ├── mul4.v
+    │   │   └── div4.v
     │   ├── gates_step2.v
-    │   ├── arithmetic_step2.v
     │   └── ashifter_step2.v
     ├── tests/
-    │   ├── tb_gates_step2.v
-    │   ├── tb_arithmetic_step2.v
+    │   ├── arithmetic/
+    │   │   ├── tb_add4.v
+    │   │   ├── tb_sub4.v
+    │   │   ├── tb_mul4.v
+    │   │   └── tb_div4.v
+    │   ├── tb_and4.v
+    │   ├── tb_nand4.v
+    │   │   ... (and so on for all gates)
     │   └── tb_ashifter_step2.v
     ├── waves/
-    │   ├── gates_step2.vcd
-    │   ├── arithmetic_step2.vcd
-    │   └── ashifter_step2.vcd
+    │   ├── add4.vcd
+    │   ├── sub4.vcd
+    │   │   ... (and so on for all modules)
     └── Makefile
 </code></pre>
 
