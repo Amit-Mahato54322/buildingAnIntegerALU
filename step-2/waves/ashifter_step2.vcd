@@ -1,0 +1,76 @@
+$date
+	Mon Mar 30 11:20:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_ashifter_step2 $end
+$var wire 4 ! y [3:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 2 # s [1:0] $end
+$var integer 32 $ errors [31:0] $end
+$scope module dut $end
+$var wire 4 % a [3:0] $end
+$var wire 2 & s [1:0] $end
+$var wire 4 ' y [3:0] $end
+$var reg 4 ( y_reg [3:0] $end
+$upscope $end
+$scope task check4 $end
+$var reg 4 ) exp [3:0] $end
+$var reg 4 * got [3:0] $end
+$var reg 256 + label [255:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx +
+bx *
+bx )
+b1011 (
+b1011 '
+b0 &
+b1011 %
+b0 $
+b0 #
+b1011 "
+b1011 !
+$end
+#5000
+b110 !
+b110 '
+b110 (
+b1 #
+b1 &
+b1011 )
+b1011 *
+b10100110011110100110000001100000010110000100000010011100100111101010000 +
+#10000
+b101 !
+b101 '
+b101 (
+b10 #
+b10 &
+b110 )
+b110 *
+b10100110011110100110000001100010010110000100000010011000101001101001100 +
+#15000
+b1101 !
+b1101 '
+b1101 (
+b11 #
+b11 &
+b101 )
+b101 *
+b10100110011110100110001001100000010110000100000010011000101001101010010 +
+#20000
+b1101 )
+b1101 *
+b10100110011110100110001001100010010110000100000010000010101001101010010 +
+#25000
